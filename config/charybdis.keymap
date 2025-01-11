@@ -224,7 +224,7 @@
 
 	COLEMAKDH {
             bindings = <
-&kp Q                           &kp W           &kp F        &kp P             &kp B           &kp J      &kp L             &kp U               &kp Y           &kp DE_SHARP_S
+&none &kp Q                           &kp W           &kp F        &kp P             &kp B           &kp J      &kp L             &kp U               &kp Y           &kp DE_SHARP_S &none
 &kp ESC         &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G           &kp M      &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI O  &kp TAB
 &kp LEFT_SHIFT  &kp DE_Y        &kp X           &kp C        &kp D             &kp V           &kp K      &kp H             &kp COMMA           &kp DOT         &kp DE_MINUS    &kp RETURN
                                                 &caps_word   &kp SPACE         &lt 1 DELETE    &lt 2 TAB  &kp BACKSPACE     &kp RETURN
