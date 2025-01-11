@@ -1,3 +1,4 @@
+#include "keys_de.h"
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
