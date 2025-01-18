@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &caps_word { continue-list = <DELETE DEL BACKSPACE KP_MINUS SLASH QUESTION SEMICOLON RIGHT_BRACKET SINGLE_QUOTE>; };
 
@@ -108,7 +109,7 @@
 
         click_right {
             bindings = <&mkp RCLK>;
-            key-positions = <34 22>;
+            key-positions = <21 33>;
         };
 
         click_middle {
@@ -118,19 +119,19 @@
 
         to_game {
             bindings = <&to 3>;
-            key-positions = <24 35>;
+            key-positions = <12 0>;
             layers = <0 5 1 2>;
         };
 
         to_colemak {
             bindings = <&to 5>;
-            key-positions = <12 23>;
+            key-positions = <23 11>;
             layers = <0 1 2>;
         };
 
         to_base {
             bindings = <&to 0>;
-            key-positions = <36 40>;
+            key-positions = <37 38>;
             layers = <1 2 5 3 4>;
         };
 
@@ -161,35 +162,15 @@
             key-positions = <2 4>;
             layers = <2>;
         };
-    };
 
-    behaviors {
-        u_mt: u_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "u_mt";
-            #binding-cells = <2>;
-            tapping_term_ms = <U_TAPPING_TERM>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        scroll_layer {
+            bindings = <&mo 7>;
+            key-positions = <22 34>;
         };
 
-        u_lt: u_lt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "u_lt";
-            #binding-cells = <2>;
-            tapping_term_ms = <U_TAPPING_TERM>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-
-        Shift_Enter: Shift_Enter {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_ENTER";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <40>;
-            tapping-term-ms = <100>;
+        sniper_layer {
+            bindings = <&mo 8>;
+            key-positions = <20 32 21 33>;
         };
     };
 
@@ -285,6 +266,15 @@
         };
 
         SCROLL {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+            >;
+        };
+
+        SNIPER {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
