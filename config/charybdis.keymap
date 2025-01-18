@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &caps_word { continue-list = <DELETE DEL BACKSPACE KP_MINUS SLASH QUESTION SEMICOLON RIGHT_BRACKET SINGLE_QUOTE>; };
 
@@ -148,6 +149,18 @@
         line_end {
             bindings = <&kp END>;
             key-positions = <19 20 21>;
+        };
+
+        fw_reset_right {
+            bindings = <&bootloader>;
+            key-positions = <7 9>;
+            layers = <2>;
+        };
+
+        fw_reset_left {
+            bindings = <&bootloader>;
+            key-positions = <2 4>;
+            layers = <2>;
         };
     };
 
