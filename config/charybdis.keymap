@@ -169,7 +169,7 @@
 
         sniper_layer {
             bindings = <&mo 8>;
-            key-positions = <20 32 21 33>;
+            key-positions = <31 32 33>;
         };
     };
 
