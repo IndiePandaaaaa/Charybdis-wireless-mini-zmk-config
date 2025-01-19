@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &caps_word { continue-list = <DELETE DEL BACKSPACE KP_MINUS SLASH QUESTION SEMICOLON RIGHT_BRACKET SINGLE_QUOTE>; };
 
@@ -164,12 +165,27 @@
 
         scroll_layer {
             bindings = <&mo 7>;
-            key-positions = <22 34>;
+            key-positions = <31 32 33>;
         };
 
         sniper_layer {
             bindings = <&mo 8>;
-            key-positions = <31 32 33>;
+            key-positions = <31 32 33 34>;
+        };
+
+        click_left_left {
+            bindings = <&mkp LCLK>;
+            key-positions = <16 28>;
+        };
+
+        click_right_left {
+            bindings = <&mkp RCLK>;
+            key-positions = <26 14>;
+        };
+
+        click_middle_left {
+            bindings = <&mkp MCLK>;
+            key-positions = <27 15>;
         };
     };
 
