@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &caps_word { continue-list = <DELETE DEL BACKSPACE KP_MINUS SLASH QUESTION SEMICOLON RIGHT_BRACKET SINGLE_QUOTE>; };
 
@@ -16,7 +17,7 @@
 / {
     combos {
         compatible = "zmk,combos";
-        
+
         rside_reset {
             bindings = <&bootloader>;
             key-positions = <7 9>;
@@ -146,34 +147,34 @@
             key-positions = <32 20>;
             layers = <0 1 2 3 4 5>;
         };
-        
+
         lside_click_left {
             bindings = <&mkp LCLK>;
-            key-positions = <16 28>;
+            key-positions = <28 26>;
             layers = <0 1 2 5>;
         };
 
         lside_click_right {
             bindings = <&mkp RCLK>;
-            key-positions = <26 14>;
+            key-positions = <25 27>;
             layers = <0 1 2 5>;
         };
 
         lside_click_middle {
             bindings = <&mkp MCLK>;
-            key-positions = <27 15>;
+            key-positions = <27 26 28>;
             layers = <0 1 2 5>;
         };
 
         to_game {
             bindings = <&to 3>;
-            key-positions = <12 0>;
+            key-positions = <12 24>;
             layers = <0 1 2 5>;
         };
 
         to_colemak {
             bindings = <&to 5>;
-            key-positions = <23 11>;
+            key-positions = <23 35>;
             layers = <0 1 2>;
         };
 
@@ -184,15 +185,14 @@
         };
 
         to_scroll {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <31 32 33>;
         };
 
         to_sniper {
-            bindings = <&mo 8>;
+            bindings = <&mo 7>;
             key-positions = <31 32 33 34>;
         };
-
     };
 
     macros {
@@ -274,15 +274,6 @@
 &kp ESC         &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G           &kp M      &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI O  &kp TAB
 &kp LEFT_SHIFT  &kp DE_Y        &kp X           &kp C        &kp D             &kp V           &kp K      &kp H             &kp COMMA           &kp DOT         &kp DE_MINUS    &kp RETURN
                                                 &caps_word   &kp SPACE         &lt 1 DELETE    &lt 2 TAB  &kp BACKSPACE
-            >;
-        };
-
-        AUTO-MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp LCLK  &trans  &mkp RCLK    &trans  &trans
             >;
         };
 
