@@ -184,12 +184,12 @@
         };
 
         to_scroll {
-            bindings = <&mo 6>;
+            bindings = <&mo 5>;
             key-positions = <31 32 33>;
         };
 
         to_sniper {
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
             key-positions = <31 32 33 34>;
         };
     };
