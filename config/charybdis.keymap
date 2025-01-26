@@ -256,13 +256,13 @@
 &none       &kp G           &kp Q     &kp W  &kp E  &kp R        &kp T       &kp DE_Z  &kp UP          &kp I          &kp O         &none
 &kp ESCAPE  &kp LEFT_SHIFT  &kp A     &kp S  &kp D  &kp F        &kp G       &kp LEFT  &kp DOWN_ARROW  &kp RIGHT      &kp L         &kp P
 &kp TAB     &kp LCTRL       &kp DE_Y  &kp X  &kp C  &kp T        &kp B       &kp N     &kp M           &kp DE_PERIOD  &kp DE_COMMA  &kp DE_MINUS
-                                      &kp M  &mo 4  &kp SPACE    &kp RETURN  &kp F12
+                                      &kp M  &mo 5  &kp SPACE    &kp RETURN  &kp F12
             >;
         };
 
         GAME_2 {
             bindings = <
-&none         &game_vrise_inv_clear  &kp N1  &kp N2     &kp DE_N3  &kp DE_N4    &trans  &trans         &trans  &trans  &trans  &none
+&none         &game_vrise_inv_clear  &kp DE_N1  &kp DE_N2     &kp DE_N3  &kp DE_N4    &trans  &trans         &trans  &trans  &trans  &none
 &kp DE_DOT    &kp F5                 &trans  &trans     &trans     &kp G        &trans  &trans         &trans  &trans  &trans  &kp DE_N7
 &kp LEFT_ALT  &kp DE_N7              &kp B   &kp J      &kp V      &kp DE_N5    &trans  &trans         &trans  &trans  &trans  &kp DE_N6
                                              &kp DE_N6  &none      &trans       &trans  &kp BACKSPACE
