@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &caps_word { continue-list = <DELETE DEL BACKSPACE KP_MINUS SLASH QUESTION SEMICOLON RIGHT_BRACKET SINGLE_QUOTE>; };
 
@@ -166,13 +167,13 @@
         };
 
         to_game {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <12 24>;
             layers = <0 1 2 5>;
         };
 
         to_colemak {
-            bindings = <&to 3>;
+            bindings = <&to 5>;
             key-positions = <23 35>;
             layers = <0 1 2>;
         };
@@ -247,10 +248,10 @@
 
         GAME_2 {
             bindings = <
-&none         &game_vrise_inv_clear  &kp DE_N1  &kp DE_N2     &kp DE_N3  &kp DE_N4    &trans  &trans         &trans  &trans  &trans  &none
-&kp DE_DOT    &kp F5                 &trans  &trans     &trans     &kp G        &trans  &trans         &trans  &trans  &trans  &kp DE_N7
-&kp LEFT_ALT  &kp DE_N7              &kp B   &kp J      &kp V      &kp DE_N5    &trans  &trans         &trans  &trans  &trans  &kp DE_N6
-                                             &kp DE_N6  &none      &trans       &trans  &kp BACKSPACE
+&none         &game_vrise_inv_clear  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4    &trans  &trans         &trans  &trans  &trans  &none
+&kp DE_DOT    &kp F5                 &trans     &trans     &trans     &kp G        &trans  &trans         &trans  &trans  &trans  &kp DE_N7
+&kp LEFT_ALT  &kp DE_N7              &kp B      &kp J      &kp V      &kp DE_N5    &trans  &trans         &trans  &trans  &trans  &kp DE_N6
+                                                &kp DE_N6  &none      &trans       &trans  &kp BACKSPACE
             >;
         };
 
