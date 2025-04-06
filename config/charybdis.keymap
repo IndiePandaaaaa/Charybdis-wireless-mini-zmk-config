@@ -141,10 +141,10 @@
             key-positions = <32 20>;
             layers = <0 1 2 3 4 5>;
         };
-        
+
         rside_click_right {
             bindings = <&mkp RCLK>;
-            key-positions = <31 19>;
+            key-positions = <33 21>;
             layers = <0 1 2 3 4 5>;
         };
 
