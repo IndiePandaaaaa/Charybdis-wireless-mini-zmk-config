@@ -119,7 +119,7 @@
             layers = <1>;
         };
 
-        line_begin {
+        line_start {
             bindings = <&kp HOME>;
             key-positions = <14 15 16>;
         };
@@ -132,12 +132,6 @@
         rside_click_left {
             bindings = <&mkp LCLK>;
             key-positions = <31 19>;
-            layers = <0 1 2 3 4 5>;
-        };
-
-        rside_click_right {
-            bindings = <&mkp RCLK>;
-            key-positions = <21 33>;
             layers = <0 1 2 3 4 5>;
         };
 
@@ -242,15 +236,6 @@
             >;
         };
 
-        COLEMAKDH {
-            bindings = <
-&none           &kp Q           &kp W           &kp F        &kp P             &kp B           &kp J      &kp L             &kp U               &kp Y           &kp DE_SHARP_S  &none
-&kp ESC         &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G           &kp M      &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI O  &kp TAB
-&kp LEFT_SHIFT  &kp DE_Y        &kp X           &kp C        &kp D             &kp V           &kp K      &kp H             &kp COMMA           &kp DOT         &kp DE_MINUS    &kp RETURN
-                                                &caps_word   &kp SPACE         &lt 1 DELETE    &lt 2 TAB  &kp BACKSPACE
-            >;
-        };
-
         GAME {
             bindings = <
 &none       &kp G           &kp Q     &kp W  &kp E  &kp R        &kp T       &kp DE_Z  &kp UP          &kp I          &kp O         &none
@@ -266,6 +251,15 @@
 &kp DE_DOT    &kp F5                 &trans  &trans     &trans     &kp G        &trans  &trans         &trans  &trans  &trans  &kp DE_N7
 &kp LEFT_ALT  &kp DE_N7              &kp B   &kp J      &kp V      &kp DE_N5    &trans  &trans         &trans  &trans  &trans  &kp DE_N6
                                              &kp DE_N6  &none      &trans       &trans  &kp BACKSPACE
+            >;
+        };
+
+        COLEMAKDH {
+            bindings = <
+&none           &kp Q           &kp W           &kp F        &kp P             &kp B           &kp J      &kp L             &kp U               &kp Y           &kp DE_SHARP_S  &none
+&kp ESC         &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G           &kp M      &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI O  &kp TAB
+&kp LEFT_SHIFT  &kp DE_Y        &kp X           &kp C        &kp D             &kp V           &kp K      &kp H             &kp COMMA           &kp DOT         &kp DE_MINUS    &kp RETURN
+                                                &caps_word   &kp SPACE         &lt 1 DELETE    &lt 2 TAB  &kp BACKSPACE
             >;
         };
 
