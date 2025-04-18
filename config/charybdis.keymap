@@ -7,8 +7,8 @@
 
 // https://github.com/urob/zmk-config#timeless-homerow-mods
 
-#define QUICK_TAP_MS 200
-#define TAPPING_TERM 240
+#define QUICK_TAP_MS 180
+#define TAPPING_TERM 220
 
 &caps_word { continue-list = <DELETE DEL BACKSPACE MINUS KP_MINUS SLASH QUESTION SEMICOLON LEFT_BRACKET RIGHT_BRACKET LEFT_BRACE RIGHT_BRACE SINGLE_QUOTE DE_A_UMLAUT DE_O_UMLAUT DE_U_UMLAUT>; };
 
@@ -40,6 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "PARENTHESIS";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp DE_LEFT_PARENTHESIS>, <&kp DE_RIGHT_PARENTHESIS>;
         };
 
@@ -47,6 +48,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACKET";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp DE_LEFT_BRACKET>, <&kp DE_RIGHT_BRACKET>;
         };
 
@@ -54,6 +56,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "BRACE";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp DE_LEFT_BRACE>, <&kp DE_RIGHT_BRACE>;
         };
 
@@ -61,6 +64,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CMOS_J_X";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp J>, <&kp X>;
         };
 
@@ -68,6 +72,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CMOS_SZ_Q";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp DE_SZ>, <&kp Q>;
         };
 
@@ -75,6 +80,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CMOS_UE_MINUS";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp DE_U_UMLAUT>, <&kp KP_MINUS>;
         };
 
@@ -82,6 +88,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CMOS_OE_UNDERSCORE";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp DE_O_UMLAUT>, <&kp DE_UNDERSCORE>;
         };
 
@@ -89,6 +96,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QWERTZ_V_UE";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp V>, <&kp DE_U_UMLAUT>;
         };
 
@@ -96,6 +104,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QWERTZ_Q_AE";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp Q>, <&kp DE_A_UMLAUT>;
         };
 
@@ -103,6 +112,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "QWERTZ_X_OE";
             #binding-cells = <0>;
+            tapping-term-ms = <QUICK_TAP_MS>;
             bindings = <&kp X>, <&kp DE_O_UMLAUT>;
         };
     };
