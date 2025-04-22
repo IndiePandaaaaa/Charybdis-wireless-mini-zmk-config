@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 // https://github.com/urob/zmk-config#timeless-homerow-mods
 
@@ -295,7 +296,7 @@
             //                      | SW19 | SW20 | SW21 |  | SW41 | SW40 |
 
             bindings = <
-&none &kp Q                             &kp W  &kp E                &kp R              &kp T           &kp DE_Z   &kp U              &kp I                &kp O       &kp P &caps_word
+&none                &kp Q        &kp W  &kp E                &kp R              &kp T           &kp DE_Z   &kp U              &kp I                &kp O       &kp P                  &caps_word
 &mt LEFT_ALT ESCAPE  &hml LGUI A  &kp S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G           &kp H      &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &kp L       &hmr LGUI DE_O_UMLAUT  &mt LEFT_ALT DE_U_UMLAUT
 &td_quotes           &kp DE_Y     &kp X  &kp C                &kp V              &kp B           &kp N      &kp M              &as DE_COMMA         &as DE_DOT  &as DE_MINUS           &mt RIGHT_ALT DE_A_UMLAUT
                                          &td_modifier         &kp SPACE          &lt 2 DELETE    &lt 3 TAB  &kp BACKSPACE
@@ -304,7 +305,7 @@
 
         KEYBR_CMOS {
             bindings = <
-&none &td_cmos_j_x                                      &kp K       &kp U              &kp O          &kp DE_A_UMLAUT           &kp P      &kp B              &kp L         &kp M     &td_cmos_sz_q &caps_word
+&none                            &td_cmos_j_x     &kp K       &kp U              &kp O          &kp DE_A_UMLAUT           &kp P      &kp B              &kp L         &kp M     &td_cmos_sz_q    &caps_word
 &mt LEFT_ALT ESCAPE              &hml LEFT_GUI W  &kp H       &hml LCTRL I       &hml LSHIFT E  &kp A                     &kp D      &hmr LEFT_SHIFT T  &hmr LCTRL N  &kp R     &hmr LEFT_GUI S  &mt LEFT_ALT DE_SINGLE_QUOTE
 &mt LEFT_SHIFT DE_DOUBLE_QUOTES  &kp DE_Y         &as DE_DOT  &td_cmos_ue_minus  &as DE_COMMA   &td_cmos_oe_underscore    &kp G      &kp C              &kp V         &kp DE_Z  &kp F            &mt RALT RETURN
                                                               &td_modifier       &kp SPACE      &lt 2 DELETE              &lt 3 TAB  &kp BACKSPACE
@@ -313,10 +314,10 @@
 
         SYMBOLS_NUMBERS {
             bindings = <
-&none                  &kp DE_SECTION      &kp DE_DOLLAR  &kp DE_AMPERSAND  &kp DE_PERCENT    &as DE_ACUTE        &kp BACKSPACE    &kp DE_N7  &kp DE_N8  &kp DE_N9  &as DE_CARET  &kp DE_DOT
-&kp ESCAPE             &kp DE_AT_SIGN      &brace         &td_parenthesis      &td_bracket          &td_less_than    &kp DE_EQUAL     &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp KP_PLUS   &as DE_HASH
-&mt LEFT_GUI DE_TILDE  &kp DE_EXCLAMATION  &kp DE_PIPE    &kp KP_SLASH      &kp DE_BACKSLASH  &kp DE_EURO         &kp KP_ASTERISK  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp KP_MINUS  &mt LEFT_SHIFT DE_COMMA
-                                                          &none             &none             &none               &mo 4            &kp DE_N0
+&none                  &kp DE_SECTION      &kp DE_DOLLAR  &kp DE_AMPERSAND  &kp DE_PERCENT    &as DE_ACUTE     &kp BACKSPACE    &kp DE_N7  &kp DE_N8  &kp DE_N9  &as DE_CARET  &kp DE_DOT
+&kp ESCAPE             &kp DE_AT_SIGN      &td_brace      &td_parenthesis   &td_bracket       &td_less_than    &kp DE_EQUAL     &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp KP_PLUS   &as DE_HASH
+&mt LEFT_GUI DE_TILDE  &kp DE_EXCLAMATION  &kp DE_PIPE    &kp KP_SLASH      &kp DE_BACKSLASH  &kp DE_EURO      &kp KP_ASTERISK  &kp DE_N1  &kp DE_N2  &kp DE_N3  &kp KP_MINUS  &mt LEFT_SHIFT DE_COMMA
+                                                          &none             &none             &none            &mo 4            &kp DE_N0
             >;
         };
 
@@ -331,10 +332,10 @@
 
         SYMBOLS_MOUSE {
             bindings = <
-&none  &mo 6             &none    &none   &none  &none               &kp RA(DE_Z)    &kp RA(DE_U)    &kp RA(LS(DE_U))  &kp RA(DE_I)     &none  &none
-&kp LCTRL  &mo 5             &mkp MCLK      &mkp LCLK      &mkp RCLK       &none               &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP      &mmv MOVE_RIGHT  &kp LEFT_GUI  &none
-&kp LSHFT  &kp RA(LS(DE_C))  &kp DE_SUPER2  &kp DE_SUPER3  &kp DE_MICRO    &kp RA(LS(DE_R))    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP      &msc SCRL_RIGHT  &none  &none
-                                        &to 1          &to 0          &none               &none           &none
+&none      &mo 6             &none          &none          &none         &none               &kp RA(DE_Z)    &kp RA(DE_U)    &kp RA(LS(DE_U))  &kp RA(DE_I)     &none         &none
+&kp LCTRL  &mo 5             &mkp MCLK      &mkp LCLK      &mkp RCLK     &none               &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP      &mmv MOVE_RIGHT  &kp LEFT_GUI  &none
+&kp LSHFT  &kp RA(LS(DE_C))  &kp DE_SUPER2  &kp DE_SUPER3  &kp DE_MICRO  &kp RA(LS(DE_R))    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP      &msc SCRL_RIGHT  &none         &none
+                                            &to 1          &to 0         &none               &none           &none
             >;
         };
 
